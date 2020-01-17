@@ -1,5 +1,8 @@
 djangoProject/__pycache__/
+
 product/__pycache__/
 product/migrations/
+product/images/
+
 db.sqlite3
 images/
