@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    {% if current_product %}
-        <p style="font-style: bold">
-            {{ current_product.img }}
-        </p>
-        <table>
-            <tr>
-                <td><img src="../images/{{ current_product.img }}" alt=""></td>
-            </tr>
-            <tr>
-                
-            </tr>
-        </table>
-    {% endif %}
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>
+        Hello, world
+    </p>
+
+    <p> {{ current_product.img }} </p>
+    <img src="{{ current_product.img.url }}" alt="">
+{% endblock %}
