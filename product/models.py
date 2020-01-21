@@ -7,11 +7,7 @@ class Product(models.Model):
     name = models.CharField('Имя', max_length = 70)
     description = models.TextField('Описание', max_length = 500)
     price = models.CharField('Цена', max_length = 20)
-    img = models.ImageField(upload_to = os.path.join(settings.MEDIA_ROOT, 'images/'), null = True, blank = True)
+    img = models.ImageField(upload_to = 'images/', null = True)
     
     def __str__(self):
         return self.name
-
-    def get_price_rub(self):
-        tmp = self.price.split()
-        return int(tmp[0]) + int(tmp[2]) / 100

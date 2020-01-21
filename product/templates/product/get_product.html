@@ -5,6 +5,8 @@
         Hello, world
     </p>
 
-    <p> {{ current_product.img }} </p>
-    <img src="{{ current_product.img.url }}" alt="">
+    {% if current_product.img %}
+        <p>{{ current_product.img }}</p>
+        <img src="{{ current_product.img.url }}" alt="">
+    {% endif %}
 {% endblock %}
